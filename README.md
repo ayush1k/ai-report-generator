@@ -1,5 +1,6 @@
-**Applied AI Builder: Automated DDR Generation Pipeline
-**
+**Applied AI Builder: Automated DDR Generation Pipeline**
+
+
 **Project Overview**
 
 This repository contains a production-ready AI workflow designed to automate the generation of Detailed Diagnostic Reports (DDR). It processes raw, unstructured property inspection data (PDF text) and thermal imaging reports (PDF images), logically merges the findings, and outputs a client-ready, strictly formatted Markdown document.
