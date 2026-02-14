@@ -1,12 +1,12 @@
-Applied AI Builder: Automated DDR Generation Pipeline
-
-Project Overview
+**Applied AI Builder: Automated DDR Generation Pipeline
+**
+**Project Overview**
 
 This repository contains a production-ready AI workflow designed to automate the generation of Detailed Diagnostic Reports (DDR). It processes raw, unstructured property inspection data (PDF text) and thermal imaging reports (PDF images), logically merges the findings, and outputs a client-ready, strictly formatted Markdown document.
 
 Objective: To demonstrate enterprise-grade LLM control, deterministic data extraction, and reliable conflict resolution without hallucinations.
 
-System Architecture
+**System Architecture**
 
 To ensure 100% adherence to the requested DDR structure and eliminate LLM hallucinations, this system abandons the "single massive prompt" approach in favor of a Decompose, Extract, and Synthesize pipeline.
 
@@ -22,7 +22,7 @@ The Synthesizer: A secondary LLM call receives both structured JSON objects. Its
 
 Formatting: The finalized JSON is mapped directly into a clean, client-facing Markdown report.
 
-Tech Stack
+**Tech Stack**
 
 Language: Python 3.10+
 
@@ -34,7 +34,7 @@ Document Processing: PyMuPDF (fitz) and Pillow (PIL)
 
 Environment: python-dotenv for secure API key management
 
-Repository Structure
+**Repository Structure**
 
 main.py: The core execution engine and LLM pipeline logic.
 
@@ -46,7 +46,7 @@ sample_thermal_report.pdf: Input file 2 (Image-based thermal data).
 
 Final_Client_Report.md: The generated output file.
 
-Key Design Decisions
+**Key Design Decisions**
 
 Zero Hallucination Guarantee: By separating the extraction from the synthesis, and using low-temperature settings (0.1) with Pydantic schemas, the system is mathematically constrained from inventing unprovided data.
 
@@ -54,7 +54,7 @@ Honest Conflict Resolution: If the visual text and thermal images contradict, or
 
 Modular Codebase: The PDF extraction functions are decoupled from the AI logic, allowing easy future integration with Word docs, APIs, or database streams.
 
-Step-by-Step Execution Guide
+**Step-by-Step Execution Guide**
 
 Follow these steps to run the DDR Generation Pipeline locally.
 
